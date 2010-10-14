@@ -1,0 +1,74 @@
+body,html{
+margin:0;
+padding:0;
+background:white;
+font-family:"Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;
+line-height:1.3;
+word-spacing:0.2em;
+font-size: 72%;
+}
+#lgperhub{
+float:right !important;
+position:relative;
+margin:5px 10px !important;
+}
+.tombol,#menu,.desc,#pnlpesan{
+display:none;
+}
+#wrapper{
+}
+#header,#content,#footer{
+background:transparent;
+}
+#header img{
+float:left;
+margin:5px 10px;
+padding:0;
+}
+form fieldset{
+border:1px solid #ccc;
+padding:12px;
+border-radius:5px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+-o-border-radius:5px;
+}
+form > fieldset{
+page-break-before:auto;
+}
+#header{
+font-size:3em;
+text-align:right;
+margin:0 0 50px 0;
+}
+#header p{
+margin:0;
+padding:0;
+text-align:center;
+}
+table{
+width:100%;
+background:#f1f7f9;
+padding:5px;
+border:none;
+border-collapse:collapse;
+}
+table thead tr th{
+text-align:left;
+padding:8px;
+width:100%:
+margin:0;
+border-top:2px solid #103647;
+border-bottom:2px solid #103647;
+background:#6ca9c6;
+}
+table td{
+padding:5px 10px;
+}
+#footer{
+text-align:center;
+font-size:0.8em;
+}
+#foto{
+float:right;
+}
