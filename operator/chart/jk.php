@@ -1,6 +1,6 @@
 <?php
 if(!isset($statistik)||!$statistik) die();
-$d1=query('SELECT COUNT( * ) jml, jk, status FROM umum GROUP BY jk, status');
+$d1=query('SELECT COUNT(*) jml, jk, status FROM umum GROUP BY jk, status');
 $d2=query("SELECT count(*) jml, jk FROM umum where status='CPNS' or status='PNS' group by jk");
 $d3=query("SELECT count(*) jml, jk FROM umum where status='mutasi' or status='pensiun' or status='meninggal' group by jk");
 

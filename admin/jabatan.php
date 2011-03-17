@@ -64,7 +64,7 @@ if($_GET&&!empty($_GET['eid'])){
                     <input type="submit" value="Update" id="updatejabatan" name="updatejabatan" class="tombol" />
                     <input type="button" value="Batal" id="batal" class="tombol" />
                     </fieldset>
-                    
+
                     <fieldset>
                     <legend>Daftar Jabatan</legend>
                         <label for="cunitkerja">UnitKerja</label>
@@ -78,14 +78,14 @@ if($_GET&&!empty($_GET['eid'])){
                             <thead>
                                 <tr><th>Seksi</th><th>Jabatan</th><th>Eselon</th><th>Operasi</th></tr>
                             </thead>
-                            <tbody> 
+                            <tbody>
                                 <?php foreach($daftarJabatan as $brs): ?>
                                 <tr>
                                     <td><?php echo $brs['seksi']; ?></td>
                                     <td><?php echo $brs['jabatan']; ?></td>
                                     <td><?php echo $brs['eselon']; ?></td>
                                     <td>
-                                        <a href="?eid=<?php echo $brs['id_jabatan']; ?>">Edit</a> &nbsp; 
+                                        <a href="?eid=<?php echo $brs['id_jabatan']; ?>">Edit</a> &nbsp;
                                         <a href="?did=<?php echo $brs['id_jabatan']; ?>">Delete</a>
                                     </td>
                                 </tr>
@@ -113,8 +113,8 @@ if($_GET&&!empty($_GET['eid'])){
         </fieldset>
         </form>
     </div>
-    <div id="dialog-confirm" title="Delete Jabatan"> 
-	    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Apakah anda yakin menghapus jabatan <span id="namahapus"></span> ?</p> 
+    <div id="dialog-confirm" title="Delete Jabatan">
+	    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Apakah anda yakin menghapus jabatan <span id="namahapus"></span> ?</p>
     </div>
 </body>
 <script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
@@ -127,7 +127,7 @@ if($_GET&&!empty($_GET['eid'])){
             id=$('#id'),unitkerja=$('#unitkerja'),seksi=$('#seksi'),jabatan=$('#jabatan'),eselon=$('#eselon'),
             tnama,tid,
             btnTambahJabatan=$('#tambahjabatan'),btnUpdate=$('#updatejabatan');
-            
+
         $('tbody tr:odd').css('background-color','#b6d7e7');
         $('#batal').click(function(){
             id.val('');
@@ -168,18 +168,18 @@ if($_GET&&!empty($_GET['eid'])){
                         tbhtbl.children().remove();
                         for(var i=0;i<data.length;i++){
                             tbhtbl.append('<tr>' +
-                            '<td>' + data[i].seksi + '</td>' + 
-                            '<td>' + data[i].jabatan + '</td>' + 
-				            '<td>' + data[i].eselon + '</td>' + 
+                            '<td>' + data[i].seksi + '</td>' +
+                            '<td>' + data[i].jabatan + '</td>' +
+				            '<td>' + data[i].eselon + '</td>' +
 				            '<td><a href="?eid='+data[i].id_jabatan+'">Edit</a> &nbsp; <a href="?did='+data[i].id_jabatan+'">Delete</a></td>' +
-				            '</tr>'); 
+				            '</tr>');
                         }
                         $('tbody tr:odd').css('background-color','#b6d7e7');
                 },
-                error:function(e){                   
+                error:function(e){
                     updatePesan('Terjadi kesalahan koneksi');
                 }
-            });	
+            });
 	    }
 
         tabelJabatan.click(function(e){
@@ -262,7 +262,7 @@ if($_GET&&!empty($_GET['eid'])){
             pnlJabatan.fadeOut('slow');
             return false;
         });
-        
+
 //code dialog form
 		var tseksi = $("#tseksi"),
 		    tjabatan = $('#tjabatan'),
@@ -298,7 +298,7 @@ if($_GET&&!empty($_GET['eid'])){
 				return true;
 			}
 		}
-		
+
 		$("#dialog-form").dialog({
 			autoOpen: false,
 			height: 400,
@@ -329,7 +329,7 @@ if($_GET&&!empty($_GET['eid'])){
                                     updatePesan(data.pesan);
                                 }
                             },
-                            error:function(e){                    
+                            error:function(e){
                                 updatePesan('Terjadi kesalahan koneksi');
                             }
 						});
@@ -345,7 +345,7 @@ if($_GET&&!empty($_GET['eid'])){
 				//nothing
 			//}
 		});
-		
+
 
 		//code konfirmasi hapus
 		$("#dialog-confirm").dialog({
@@ -370,7 +370,7 @@ if($_GET&&!empty($_GET['eid'])){
                                 updatePesan(data.pesan);
                             }
                         },
-                        error:function(e){                    
+                        error:function(e){
                             updatePesan('Terjadi kesalahan koneksi');
                         }
 			        });
