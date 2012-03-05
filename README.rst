@@ -8,7 +8,7 @@ https://github.com/sakti/pegawai/issues
 Info lebih lanjut:
 http://saktidwicahyono.name
 
------------
+------------
 Default User
 ------------
 
